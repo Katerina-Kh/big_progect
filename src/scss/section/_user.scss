@@ -1,35 +1,36 @@
 .wrapper {
     display: grid;
     grid-template-columns: 133px 1fr;
-    grid-gap: 120px;
-  
+    grid-gap: 113px;
+
     @media (max-width:1820px) {
-      column-gap: 15px;
+        column-gap: 15px;
         justify-content: space-between;
     }
-  
-  }
-  
-  .user__container {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    column-gap: 115px;
-    margin-top: 28px;
-    width: 100%;
-    max-width: 1500px;
-    justify-content: space-between;  
-  
-    @media (max-width:1820px) {
-      column-gap: 15px;
-  
-    }
-    @media (max-width:1700px) {
-      width: 1300px;
-    }
-  }
+
+}
 
 
 .user {
+    &__container {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        column-gap: 115px;
+        margin-top: 28px;
+        width: 100%;
+        max-width: 1500px;
+        justify-content: space-between;
+
+        @media (max-width:1820px) {
+            column-gap: 15px;
+
+        }
+
+        @media (max-width:1700px) {
+            width: 1300px;
+        }
+    }
+
     &__hello {
         display: flex;
         justify-content: space-between;
@@ -43,6 +44,10 @@
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 3;
+
+        &-img {
+            margin-right: 67px;
+        }
 
         &-text {
             margin-top: 27px;
@@ -67,11 +72,12 @@
         }
     }
 
-    &__course {
+    &__courses {
         display: grid;
-        grid-template-columns: 10fr 1fr 1fr;
-        grid-gap: 40px;
+        grid-template-columns: 100px 2fr 1fr 150px;
+        align-items: center;
         margin-top: 40px;
+        padding-right: 48px;
         width: 100%;
         max-width: 990px;
         background-color: $grey;
@@ -82,30 +88,22 @@
         grid-row-start: 3;
         grid-row-end: 4;
 
-        .course {
-            &__info {
-                display: grid;
-                grid-template-columns: 10% 90%;
-            }
 
-            &-desc {
-                margin-left: 38px;
-
-                p {
-                    margin: 0;
-                }
-            }
-        }
     }
 }
 
-.course {
+.courses {
     width: 990px;
 
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 4;
-    grid-row-end: 6;
+    grid-row-end: 7;
+
+    &__progress{
+        justify-self: flex-end;
+        margin-right: 47px;
+    }
 
     // @media (max-width:1605px) {
     //     width: 800px;

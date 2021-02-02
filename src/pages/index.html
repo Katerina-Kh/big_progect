@@ -94,19 +94,21 @@
           </div>
         </div>
 
-        <div class="user__course">
-          <div class="course__info">
-            <img class="course__img" src="img/Spanish.svg" alt="" />
-            <div class="course__desc">
-              <h3 class="course-neme">Испанский язык</h3>
-              <p class="course-author">Автор: Alejandro Velazquez</p>
-            </div>
+        <div class="user__courses">
+          <div class="courses__img-wrap">
+            <img class="courses__img" src="img/Spanish.svg" alt="Figma" />
           </div>
-          <div class="course__progress">
+          <div class="courses__desc">
+            <h3 class="courses-neme courses-neme--user">Испанский язык</h3>
+            <p class="courses-author">Автор: Alejandro Velazquez</p>
+        </div>
+          <div class="courses__progress">
             <img class="progress-img" src="img/progress.svg" alt="" />
           </div>
-          <button class="button button--accent">Продолжить</button>
-        </div>
+          <div class="courses__button">
+            <button class="button button--accent">Продолжить</button>
+          </div>
+      </div>
 
         <div class="info__statistics">
           <h2 class="info-title">Ваша статистика</h2>
@@ -130,7 +132,7 @@
         <div class="courses">
           <h2 class="courses__title">Курсы</h2>
           <div class="filter-button" id="myBtnContainer">
-            <button class="btn btn-filter active" onclick="filterSelection('all')">
+            <button class="btn btn-filter  btn-filter--active" onclick="filterSelection('all')">
               Все курсы
             </button>
             <button class="btn btn-filter" onclick="filterSelection('popular')">
@@ -157,9 +159,9 @@
               <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
               <p class="courses-text">4,9</p>
             </div>
-            <div class="courses__button">
+
               <button class="button button--transparent">О курсе</button>
-            </div>
+
           </div>
           <div class="courses__wrapper ">
             <div class="courses__img-wrap">

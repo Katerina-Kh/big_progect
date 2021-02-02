@@ -54,6 +54,10 @@
         line-height: 19px;
         color: $black;
         padding-bottom: 8px;
+
+        &--user{
+            font-weight: 700;
+        }
     }
 
     &-author,
