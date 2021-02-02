@@ -1,7 +1,28 @@
+.filter-button {
+    padding: 25px 0;
+}
+
+
+.btn-filter {
+    font-family: SFUIText;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: $black;
+    opacity: 0.3;
+
+    &--active {
+        opacity: 5;
+    }
+}
+
 .courses {
+
+    margin-top: 95px;
+
     &__wrapper {
-        display: grid;
-        grid-template-columns: 110px 2fr 1fr 1fr 410px;
+        display: none;
         align-items: center;
         background-color: $grey;
         margin-bottom: 16px;
@@ -43,12 +64,14 @@
         margin: 0;
         color: $black;
     }
+
     &__time,
-    &__rating{
+    &__rating {
         display: flex;
         align-items: center;
     }
-    &-icon{
+
+    &-icon {
         margin-right: 10px;
     }
 
@@ -58,4 +81,9 @@
         align-items: center;
     }
 
+}
+
+.show {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 420px;
 }
