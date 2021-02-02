@@ -25,6 +25,7 @@
         display: none;
         align-items: center;
         background-color: $grey;
+        border-radius: 14px;
         margin-bottom: 16px;
 
         &:last-child {
@@ -76,14 +77,14 @@
     }
 
     &__button {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 25px;
     }
 
 }
 
 .show {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr 420px;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
 }
