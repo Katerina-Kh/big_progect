@@ -45,7 +45,16 @@
 				<img class="info__search" src="img/search.svg" alt="search" />
 				<input class="info__input" type="text" placeholder="Введи название курса" />
 				<img class="info__user-foto" src="img/user-foto.jpg" alt="Foto" />
-				<img class="info__arrow" src="img/arrow.svg" alt="Select" />
+				<div class="info__sub-menu">
+
+					<img class="sub-menu__arrow" src="img/arrow.svg" alt="Select" />
+					<ul class="sub-menu__list">
+						<li class="sub-menu__item"><a href="#" class="sub-menu__link">Профиль</a></li>
+						<li class="sub-menu__item"><a href="#" class="sub-menu__link">Настройки</a></li>
+						<li class="sub-menu__item"><a href="#" class="sub-menu__link">Выйти</a></li>
+					</ul>
+
+				</div>
 			</div>
 
 			<div class="user__hello">
@@ -105,7 +114,7 @@
 			<div class="courses">
 				<h2 class="courses__title">Курсы</h2>
 				<div class="filter-button" id="myBtnContainer">
-					<button class="btn btn-filter  btn-filter--active" onclick="filterSelection('all')">
+					<button class="btn btn-filter btn-filter--active" onclick="filterSelection('all')">
 						Все курсы
 					</button>
 					<button class="btn btn-filter" onclick="filterSelection('popular')">
@@ -134,90 +143,84 @@
 					</div>
 
 					<button class="button button--transparent">О курсе</button>
-
 				</div>
-				<div class="courses__wrapper ">
+				<div class="courses__wrapper">
 					<div class="courses__img-wrap">
-						<img class="courses__img" src="img/icon/foto.svg" alt="Photo">
+						<img class="courses__img" src="img/icon/foto.svg" alt="Photo" />
 					</div>
 					<div class="courses__desc">
 						<h3 class="courses-neme">Основы фотографии</h3>
 						<p class="courses-author">Автор: Gordon Norman</p>
 					</div>
 					<div class="courses__time">
-						<img class="courses-icon" src="img/icon/timer.svg" alt="Timer">
+						<img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
 						<p class="courses-text">3ч 15мин</p>
 					</div>
 					<div class="courses__rating">
-						<img class="courses-icon" src="img/icon/fire.svg" alt="Rating">
+						<img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
 						<p class="courses-text">4,7</p>
 					</div>
-					<div class="courses__button">
-						<button class="button button--transparent">О курсе</button>
-					</div>
+
+					<button class="button button--transparent">О курсе</button>
 				</div>
 				<div class="courses__wrapper new">
 					<div class="courses__img-wrap">
-						<img class="courses__img" src="img/icon/insta.svg" alt="Instagram">
+						<img class="courses__img" src="img/icon/insta.svg" alt="Instagram" />
 					</div>
 					<div class="courses__desc">
 						<h3 class="courses-neme">Мастер Instagram</h3>
 						<p class="courses-author">by Sophie Gill</p>
 					</div>
 					<div class="courses__time">
-						<img class="courses-icon" src="img/icon/timer.svg" alt="Timer">
+						<img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
 						<p class="courses-text">7ч 40мин</p>
 					</div>
 					<div class="courses__rating">
-						<img class="courses-icon" src="img/icon/fire.svg" alt="Rating">
+						<img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
 						<p class="courses-text">4,6</p>
 					</div>
-					<div class="courses__button">
-						<button class="button button--transparent">О курсе</button>
-					</div>
+
+					<button class="button button--transparent">О курсе</button>
 				</div>
 				<div class="courses__wrapper popular">
 					<div class="courses__img-wrap">
-						<img class="courses__img" src="img/icon/pancil.svg" alt="Design">
+						<img class="courses__img" src="img/icon/pancil.svg" alt="Design" />
 					</div>
 					<div class="courses__desc">
 						<h3 class="courses-neme">Курсы рисования</h3>
 						<p class="courses-author">by Jean Tate</p>
 					</div>
 					<div class="courses__time">
-						<img class="courses-icon" src="img/icon/timer.svg" alt="Timer">
+						<img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
 						<p class="courses-text">11ч 30мин</p>
 					</div>
 					<div class="courses__rating">
-						<img class="courses-icon" src="img/icon/fire.svg" alt="Rating">
+						<img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
 						<p class="courses-text">4,8</p>
 					</div>
-					<div class="courses__button">
-						<button class="button button--transparent">О курсе</button>
-					</div>
+
+					<button class="button button--transparent">О курсе</button>
 				</div>
 				<div class="courses__wrapper">
 					<div class="courses__img-wrap">
-						<img class="courses__img" src="img/icon/ps.svg" alt="Photoshop">
+						<img class="courses__img" src="img/icon/ps.svg" alt="Photoshop" />
 					</div>
 					<div class="courses__desc">
 						<h3 class="courses-neme">Основы Photoshop</h3>
 						<p class="courses-author">by David Green</p>
 					</div>
 					<div class="courses__time">
-						<img class="courses-icon" src="img/icon/timer.svg" alt="Timer">
+						<img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
 						<p class="courses-text">5ч 35мин</p>
 					</div>
 					<div class="courses__rating">
-						<img class="courses-icon" src="img/icon/fire.svg" alt="Rating">
+						<img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
 						<p class="courses-text">4,7</p>
 					</div>
-					<div class="courses__button">
-						<button class="button button--transparent">О курсе</button>
-					</div>
+
+					<button class="button button--transparent">О курсе</button>
 				</div>
 			</div>
-
 		</div>
 	</div>
 	<script src="js/common.js"></script>

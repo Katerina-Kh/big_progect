@@ -1,3 +1,12 @@
+// ! Список
+const arrow = document.querySelectorAll(".sub-menu__arrow");
+const SubMenu = document.querySelectorAll(".sub-menu__list");
+arrow.onclick = function() {
+  SubMenu.classList.add("sub-menu--active");
+}
+
+
+
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
@@ -41,3 +50,4 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " btn-filter--active";
   });
 }
+
