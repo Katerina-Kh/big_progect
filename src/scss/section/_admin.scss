@@ -1,4 +1,4 @@
-.adnin {
+.admin {
     &__container {
         width: 100%;
         max-width: 1550px;
@@ -20,6 +20,11 @@
         font-size: 24px;
         line-height: 29px;
         margin: 0;
+    }
+
+    &__courses{
+        margin-top: 95px;
+        width: 1550px;
     }
 }
 

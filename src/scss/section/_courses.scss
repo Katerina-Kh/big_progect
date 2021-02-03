@@ -19,8 +19,6 @@
 
 .courses {
 
-    margin-top: 95px;
-
     &__wrapper {
         display: none;
         align-items: center;
@@ -74,6 +72,18 @@
     &__rating {
         display: flex;
         align-items: center;
+    }
+
+    &__rating {
+        margin-right: 300px;
+
+        @media (max-width:1610px) {
+            margin-right: 100px;
+        }
+
+        @media (max-width:1310px) {
+            margin-right: 0;
+        }
     }
 
     &-icon {
