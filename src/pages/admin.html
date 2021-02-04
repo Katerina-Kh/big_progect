@@ -1,208 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Панель администратора</title>
-    <link rel="stylesheet" href="css/bundle.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+@@include("blocks/_header.html", 
+{ "title": "Панель администратора", "desc":
+"Панель администратора" 
+})
 
-  <body>
-    <div class="wrapper">
-      <nav class="menu">
-        <div class="menu__wrapper">
-          <div class="menu__top">
-            <a class="menu__logo" href="index.html">
-              <img class="menu__img" src="img/logo.svg" alt="F" />
-            </a>
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a class="menu__link" href="#"
-                  ><img class="menu__icon" src="img/icon/home.svg" alt="Home"
-                /></a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#"
-                  ><img
-                    class="menu__icon"
-                    src="img/icon/lessons.svg"
-                    alt="Lessons"
-                /></a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#"
-                  ><img
-                    class="menu__icon"
-                    src="img/icon/account.svg"
-                    alt="Account"
-                /></a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#"
-                  ><img
-                    class="menu__icon"
-                    src="img/icon/message.svg"
-                    alt="Message"
-                /></a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#"
-                  ><img
-                    class="menu__icon"
-                    src="img/icon/settings.svg"
-                    alt="Settings"
-                /></a>
-              </li>
-            </ul>
-          </div>
-          <div class="menu__bottom">
-            <a class="menu__link" href="#"
-              ><img class="menu__icon" src="img/icon/exit.svg" alt="Exit"
-            /></a>
-          </div>
+<div class="wrapper">
+  @@include("blocks/_menu.html")
+
+  <!-- ! Исправила опичатку в слове admin-->
+  <div class="admin__container">
+    <h2 class="admin__title">Панель администратора</h2>
+
+    <!-- ! Накинула допольнительный клас admin__courses-->
+    <div class="courses admin__courses">
+      <h2 class="courses__title">Курсы</h2>
+      <div class="filter-button" id="myBtnContainer">
+        <button
+          class="btn btn-filter btn-filter--active"
+          onclick="filterSelection('all')"
+        >
+          Все курсы
+        </button>
+        <button class="btn btn-filter" onclick="filterSelection('popular')">
+          Новые
+        </button>
+        <button class="btn btn-filter" onclick="filterSelection('new')">
+          Самые популярные
+        </button>
+      </div>
+      <div class="courses__wrapper popular">
+        <div class="courses__img-wrap">
+          <img class="courses__img" src="img/icon/figma.svg" alt="Figma" />
         </div>
-      </nav>
-      <div class="admin__container">
-        <h2 class="admin__title">Панель администратора</h2>
-        <div class="courses admin__courses">
-          <h2 class="courses__title">Курсы</h2>
-          <div class="filter-button" id="myBtnContainer">
-            <button
-              class="btn btn-filter btn-filter--active"
-              onclick="filterSelection('all')"
-            >
-              Все курсы
-            </button>
-            <button class="btn btn-filter" onclick="filterSelection('popular')">
-              Новые
-            </button>
-            <button class="btn btn-filter" onclick="filterSelection('new')">
-              Самые популярные
-            </button>
-          </div>
-          <div class="courses__wrapper popular">
-            <div class="courses__img-wrap">
-              <img class="courses__img" src="img/icon/figma.svg" alt="Figma" />
-            </div>
-            <div class="courses__desc">
-              <h3 class="courses-neme">Figma с нуля</h3>
-              <p class="courses-author">Автор: Christopher Morgan</p>
-            </div>
-            <div class="courses__time">
-              <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
-              <p class="courses-text">6ч 30мин</p>
-            </div>
-            <div class="courses__rating">
-              <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
-              <p class="courses-text">4,9</p>
-            </div>
-            <div class="courses__button">
-              <button class="button button--transparent">О курсе</button>
-              <button class="button button--accent">Изменить курс</button>
-              <button class="button button--alert">Удалить курс</button>
-            </div>
-          </div>
-          <div class="courses__wrapper">
-            <div class="courses__img-wrap">
-              <img class="courses__img" src="img/icon/foto.svg" alt="Photo" />
-            </div>
-            <div class="courses__desc">
-              <h3 class="courses-neme">Основы фотографии</h3>
-              <p class="courses-author">Автор: Gordon Norman</p>
-            </div>
-            <div class="courses__time">
-              <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
-              <p class="courses-text">3ч 15мин</p>
-            </div>
-            <div class="courses__rating">
-              <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
-              <p class="courses-text">4,7</p>
-            </div>
-            <div class="courses__button">
-              <button class="button button--transparent">О курсе</button>
-              <button class="button button--accent">Изменить курс</button>
-              <button class="button button--alert">Удалить курс</button>
-            </div>
-          </div>
-          <div class="courses__wrapper new">
-            <div class="courses__img-wrap">
-              <img
-                class="courses__img"
-                src="img/icon/insta.svg"
-                alt="Instagram"
-              />
-            </div>
-            <div class="courses__desc">
-              <h3 class="courses-neme">Мастер Instagram</h3>
-              <p class="courses-author">by Sophie Gill</p>
-            </div>
-            <div class="courses__time">
-              <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
-              <p class="courses-text">7ч 40мин</p>
-            </div>
-            <div class="courses__rating">
-              <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
-              <p class="courses-text">4,6</p>
-            </div>
-            <div class="courses__button">
-              <button class="button button--transparent">О курсе</button>
-              <button class="button button--accent">Изменить курс</button>
-              <button class="button button--alert">Удалить курс</button>
-            </div>
-          </div>
-          <div class="courses__wrapper popular">
-            <div class="courses__img-wrap">
-              <img
-                class="courses__img"
-                src="img/icon/pancil.svg"
-                alt="Design"
-              />
-            </div>
-            <div class="courses__desc">
-              <h3 class="courses-neme">Курсы рисования</h3>
-              <p class="courses-author">by Jean Tate</p>
-            </div>
-            <div class="courses__time">
-              <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
-              <p class="courses-text">11ч 30мин</p>
-            </div>
-            <div class="courses__rating">
-              <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
-              <p class="courses-text">4,8</p>
-            </div>
-            <div class="courses__button">
-              <button class="button button--transparent">О курсе</button>
-              <button class="button button--accent">Изменить курс</button>
-              <button class="button button--alert">Удалить курс</button>
-            </div>
-          </div>
-          <div class="courses__wrapper">
-            <div class="courses__img-wrap">
-              <img class="courses__img" src="img/icon/ps.svg" alt="Photoshop" />
-            </div>
-            <div class="courses__desc">
-              <h3 class="courses-neme">Основы Photoshop</h3>
-              <p class="courses-author">by David Green</p>
-            </div>
-            <div class="courses__time">
-              <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
-              <p class="courses-text">5ч 35мин</p>
-            </div>
-            <div class="courses__rating">
-              <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
-              <p class="courses-text">4,7</p>
-            </div>
-            <div class="courses__button">
-              <button class="button button--transparent">О курсе</button>
-              <button class="button button--accent">Изменить курс</button>
-              <button class="button button--alert">Удалить курс</button>
-            </div>
-          </div>
+        <div class="courses__desc">
+          <h3 class="courses-neme">Figma с нуля</h3>
+          <p class="courses-author">Автор: Christopher Morgan</p>
         </div>
-        <button class="btn__add button button--black">Добавить курс</button>
+        <div class="courses__time">
+          <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
+          <p class="courses-text">6ч 30мин</p>
+        </div>
+        <div class="courses__rating">
+          <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
+          <p class="courses-text">4,9</p>
+        </div>
+        <div class="courses__button">
+          <button class="button button--transparent">О курсе</button>
+          <button class="button button--accent">Изменить курс</button>
+          <button class="button button--alert">Удалить курс</button>
+        </div>
+      </div>
+      <div class="courses__wrapper">
+        <div class="courses__img-wrap">
+          <img class="courses__img" src="img/icon/foto.svg" alt="Photo" />
+        </div>
+        <div class="courses__desc">
+          <h3 class="courses-neme">Основы фотографии</h3>
+          <p class="courses-author">Автор: Gordon Norman</p>
+        </div>
+        <div class="courses__time">
+          <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
+          <p class="courses-text">3ч 15мин</p>
+        </div>
+        <div class="courses__rating">
+          <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
+          <p class="courses-text">4,7</p>
+        </div>
+        <div class="courses__button">
+          <button class="button button--transparent">О курсе</button>
+          <button class="button button--accent">Изменить курс</button>
+          <button class="button button--alert">Удалить курс</button>
+        </div>
+      </div>
+      <div class="courses__wrapper new">
+        <div class="courses__img-wrap">
+          <img class="courses__img" src="img/icon/insta.svg" alt="Instagram" />
+        </div>
+        <div class="courses__desc">
+          <h3 class="courses-neme">Мастер Instagram</h3>
+          <p class="courses-author">by Sophie Gill</p>
+        </div>
+        <div class="courses__time">
+          <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
+          <p class="courses-text">7ч 40мин</p>
+        </div>
+        <div class="courses__rating">
+          <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
+          <p class="courses-text">4,6</p>
+        </div>
+        <div class="courses__button">
+          <button class="button button--transparent">О курсе</button>
+          <button class="button button--accent">Изменить курс</button>
+          <button class="button button--alert">Удалить курс</button>
+        </div>
+      </div>
+      <div class="courses__wrapper popular">
+        <div class="courses__img-wrap">
+          <img class="courses__img" src="img/icon/pancil.svg" alt="Design" />
+        </div>
+        <div class="courses__desc">
+          <h3 class="courses-neme">Курсы рисования</h3>
+          <p class="courses-author">by Jean Tate</p>
+        </div>
+        <div class="courses__time">
+          <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
+          <p class="courses-text">11ч 30мин</p>
+        </div>
+        <div class="courses__rating">
+          <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
+          <p class="courses-text">4,8</p>
+        </div>
+        <div class="courses__button">
+          <button class="button button--transparent">О курсе</button>
+          <button class="button button--accent">Изменить курс</button>
+          <button class="button button--alert">Удалить курс</button>
+        </div>
+      </div>
+      <div class="courses__wrapper">
+        <div class="courses__img-wrap">
+          <img class="courses__img" src="img/icon/ps.svg" alt="Photoshop" />
+        </div>
+        <div class="courses__desc">
+          <h3 class="courses-neme">Основы Photoshop</h3>
+          <p class="courses-author">by David Green</p>
+        </div>
+        <div class="courses__time">
+          <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
+          <p class="courses-text">5ч 35мин</p>
+        </div>
+        <div class="courses__rating">
+          <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
+          <p class="courses-text">4,7</p>
+        </div>
+        <div class="courses__button">
+          <button class="button button--transparent">О курсе</button>
+          <button class="button button--accent">Изменить курс</button>
+          <button class="button button--alert">Удалить курс</button>
+        </div>
       </div>
     </div>
-    <script src="js/common.js"></script>
-  </body>
-</html>
+    <button class="btn__add button button--black">Добавить курс</button>
+  </div>
+</div>
+
+@@include("blocks/_footer.html")
