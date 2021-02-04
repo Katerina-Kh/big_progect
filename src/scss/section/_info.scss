@@ -34,6 +34,18 @@
         grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 2;
+
+        &-inner{
+            display: flex;
+            align-items: center;
+            padding: 15px;
+        }
+
+        @media (max-width:1150px) {
+            width: auto;
+            justify-content: space-between;
+            margin-bottom: 25px;
+           }  
     }
 
     &__search {
@@ -49,16 +61,21 @@
         line-height: 14px;
         color: $black;
         opacity: 0.3;
-        max-width: 300px;
+
+        
         width: 100%;
         background-color: $grey;
         border-radius: 14px;
         padding-left: 45px;
         height: 40px;
+
+        @media (max-width:1150px) {
+            width: 600px;
+           }  
     }
 
     &__user-foto {
-        padding: 10px;
+        padding: 5px;
     }
 
 
@@ -68,7 +85,9 @@
         .sub-menu{
             &__arrow{
                 cursor: pointer;
-                padding: 10px;
+                margin: 10px;
+                width: 7px;
+                height: 4px;
             }
             &__list{
                 display: none;
@@ -102,14 +121,18 @@
 
     // ! Статистика
     &__amount {
+
         &-course {
             display: flex;
             width: 450px;
+            align-self: center;
 
             grid-column-start: 2;
             grid-column-end: 3;
             grid-row-start: 2;
             grid-row-end: 3;
+
+            
         }
 
         &-wrap {
@@ -144,6 +167,7 @@
                     color: $black;
                 }
             }
+
         }
     }
 
@@ -161,6 +185,10 @@
             max-width: 450px;
             margin-bottom: 50px;
         }
+
+        @media (max-width:1150px) {
+            display: none;
+           }  
     }
 
     // ! Больше курсов
@@ -176,6 +204,13 @@
             grid-column-end: 3;
             grid-row-start: 7;
             grid-row-end: 10;
+            
+        @media (max-width:1150px) {
+            width: 600px;
+            justify-content: space-between;
+            margin: 0 auto;
+            align-self: center;
+           } 
         }
 
         &-img {

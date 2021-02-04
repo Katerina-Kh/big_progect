@@ -27,11 +27,14 @@
         max-width: 1600px;
         justify-content: space-between;
 
-
         @media (max-width:1780px) {
             column-gap: 25px;
-        }
+        }      
 
+        @media (max-width:1150px) {
+         display: flex;
+         flex-direction: column;
+        }  
     }
 
     &__hello {
@@ -109,8 +112,4 @@
         justify-self: flex-end;
         margin-right: 47px;
     }
-
-    // @media (max-width:1605px) {
-    //     width: 800px;
-    //   }
 }
