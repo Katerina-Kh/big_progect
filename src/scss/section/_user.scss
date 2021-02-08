@@ -1,24 +1,23 @@
 .wrapper {
-    display: grid;
-    grid-template-columns: 133px 1fr;
-    grid-gap: 113px;
-    position: relative;
+    margin-left: 133px;
+    padding-left: 113px;
     max-width: 1810px;
     height: 100%;
     overflow: hidden;
     margin-bottom: 25px;
 
     @media (max-width:1720px) {
-        column-gap: 25px;
+        padding-left: 15px;
         justify-content: space-between;
     }
 
     @media (max-width:630px) {
-        grid-template-columns: 100px 1fr;
+        padding: 0;
+        margin-left: 100px;
+
     }
 
     @media (max-width:585px) {
-        grid-template-columns: 100%;
         margin: 20px;
     }
 
@@ -169,24 +168,6 @@
 
         }
 
-
-    }
-}
-
-.courses {
-
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 7;
-
-    &__progress {
-        justify-self: flex-end;
-        margin-right: 47px;
-    }
-
-    @media (max-width:510px) {
-        order: 6;
 
     }
 }

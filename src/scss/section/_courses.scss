@@ -1,9 +1,27 @@
+.courses {
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 12;
+
+    &__progress {
+        justify-self: flex-end;
+        margin-right: 47px;
+    }
+
+    @media (max-width:510px) {
+        order: 6;
+
+    }
+}
+
 .filter-button {
     padding: 25px 0;
 }
 
 .courses {
-
+height: 100%;
     &__wrapper {
         display: none;
         align-items: center;
@@ -14,6 +32,9 @@
 
         &:last-child {
             margin-bottom: 0;
+        }
+        @media (max-width:585px) {
+            padding: 15px 5px 0;
         }
     }
 

@@ -1,18 +1,16 @@
-@@include("blocks/_header.html", 
-{ "title": "Панель администратора", "desc":
-"Панель администратора" 
-})
-
-@@include("blocks/_mobile-menu.html")
+@@include("blocks/_header.html", { "title": "Панель администратора", "desc":
+"Панель администратора" })
 
 <div class="wrapper">
-  @@include("blocks/_menu.html")
+  @@include("blocks/_menu.html") 
+  @@include("blocks/_mobile-menu.html")
+  <div class="mobile-menu">
+    <img class="mobile-menu__img" src="img/menu.svg" alt="Menu" />
+  </div>
 
-  <!-- ! Исправила опичатку в слове admin-->
   <div class="admin__container">
     <h2 class="admin__title">Панель администратора</h2>
 
-    <!-- ! Накинула допольнительный клас admin__courses-->
     <div class="courses admin__courses">
       <h2 class="courses__title">Курсы</h2>
       <div class="filter-button" id="myBtnContainer">
