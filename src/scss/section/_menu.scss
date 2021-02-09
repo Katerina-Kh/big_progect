@@ -54,6 +54,7 @@
         font-size: 16px;
         line-height: 100%;
         color: #FFFFFF;
+        padding-left: 25px;
     }
 
     &__bottom {
@@ -94,9 +95,14 @@
             &__item {
                 padding-bottom: 50px;
 
+
                 &:last-child {
                     padding-bottom: 0px;
                 }
+            }
+            &__link{
+                display: flex;
+                align-items: center;                
             }
             &__close{
                 cursor: pointer;
@@ -111,12 +117,14 @@
     }
 
 
-    &__img {
+    &__icon {
         width: 31px;
         height: 21px;
         margin-right: 20px;
         cursor: pointer;
     }
+
+
 
     @media (max-width:585px) {
         display: block;

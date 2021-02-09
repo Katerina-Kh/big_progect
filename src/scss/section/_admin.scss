@@ -25,7 +25,31 @@
 
     &__courses {
         margin-top: 95px;
-        width: 1550px;
+        width: 100%;
+
+        .courses {
+            &__wrapper {
+
+                @media (max-width:1065px) {
+                    grid-template-columns: repeat(4, 25%);
+                    padding-bottom: 10px;
+                }
+                @media (max-width:691px) {
+                    grid-template-columns: repeat(2, 49%);
+                    padding-bottom: 10px;
+                }
+            }
+            &__button{
+                @media (max-width:1065px) {
+                    grid-column-start: 1;
+                    grid-column-end: 5;
+                    justify-self: center;
+                }
+          
+            }
+
+        }
+
 
         @media (max-width:585px) {
             margin-top: 20px;
