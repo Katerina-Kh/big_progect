@@ -100,11 +100,13 @@
                     padding-bottom: 0px;
                 }
             }
-            &__link{
+
+            &__link {
                 display: flex;
-                align-items: center;                
+                align-items: center;
             }
-            &__close{
+
+            &__close {
                 cursor: pointer;
             }
         }
@@ -123,8 +125,6 @@
         margin-right: 20px;
         cursor: pointer;
     }
-
-
 
     @media (max-width:585px) {
         display: block;
