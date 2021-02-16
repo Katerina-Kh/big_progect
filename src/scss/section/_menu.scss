@@ -18,16 +18,31 @@
         }
 
         &__img {
-            padding-top: 45px;
-            padding-bottom: 110px;
+            margin-top: 45px;
+            margin-bottom: 110px;
         }
 
         &__item {
-            padding-bottom: 65px;
+            margin-bottom: 65px;
             text-align: center;
+            width: 35px;
+            height: 35px;
 
             &:last-child {
                 padding-bottom: 0px;
+            }
+        }
+
+        &__icon {
+            transform: all 2s ease-in-out;
+
+            &:hover {
+                width: 35px;
+                height: 35px;
+            }
+
+            &:focus {
+                border: 2px solid #ff0000;
             }
         }
     }

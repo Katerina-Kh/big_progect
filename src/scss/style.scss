@@ -9,8 +9,14 @@
 @import "parts/basic";
 
 // ! Секції
+//? admin & user
 @import "section/menu";
 @import "section/user";
 @import "section/info";
 @import "section/admin";
 @import "section/courses";
+
+// ? main & about
+@import "section/header";
+@import "section/footer";
+

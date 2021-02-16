@@ -29,6 +29,9 @@
 
         .courses {
             &__wrapper {
+                &:focus {
+                    background-color: #ff0000;
+                   }
 
                 @media (max-width:1065px) {
                     grid-template-columns: 150px 40% 20% 20%;

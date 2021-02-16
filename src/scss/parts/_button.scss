@@ -14,6 +14,11 @@
   font-weight: 700;
   color: $black;
 
+
+  &:focus {
+    background-color: #ff0000;
+  }
+
   &--transparent {
     border: 2px solid $black;
     color: $black;
@@ -73,6 +78,10 @@
 
   &--active {
     opacity: 5;
+  }
+
+  &:focus {
+    background-color: #ff0000;
   }
 
   @media (max-width:420px) {

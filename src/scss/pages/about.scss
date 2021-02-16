@@ -1,0 +1,119 @@
+.section__tittle {
+    text-align: center;
+    padding: 30px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 35px;
+
+    @media (max-width: 1125px) {
+        justify-content: center;
+    }
+}
+
+.card {
+    border-radius: 28px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 10px 20px 30px rgb(145, 144, 144);
+
+    &__title {
+        text-align: center;
+    }
+}
+
+.course {
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 15px;
+
+        @media (max-width: 965px) {
+            justify-content: center;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        min-width: 250px;
+        margin: 25px;
+
+        &-tittle {
+            font-size: 90px;
+            line-height: 1.4;
+            font-weight: 600;
+            margin: 0;
+
+
+        }
+    }
+}
+
+.programm__img {
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.after {
+    &__course {
+
+        &-block {
+            max-width: 250px;
+            height: 250px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            justify-content: center;
+        }
+
+        &-text {
+            font-size: 18px;
+            font-weight: 400;
+            z-index: 1;
+            line-height: 1.55;
+        }
+
+        &-number {
+            color: #e6e6e6;
+            font-size: 200px;
+            font-weight: 700;
+            position: absolute;
+            line-height: 150px;
+        }
+    }
+
+    &__courses {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media (max-width: 606px) {
+            justify-content: center;
+        }
+    }
+}
+
+.section {
+    background-color: #2FDAC5;
+}
