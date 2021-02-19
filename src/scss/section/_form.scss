@@ -1,0 +1,53 @@
+.form {
+    &__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 10px;        
+    }
+
+    &__subtitle {
+        font-family: S UIText;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $black;
+        margin-bottom: 25px;
+    }
+
+    &__title {
+        font-family: SFUIText;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 33px;
+        color: $black;
+        margin-bottom: 50px;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__input {
+        height: 40px;
+        width: 350px;
+        margin: 10px 0;
+        border: solid 1px $accent;
+        border-radius: 10px;
+        padding-left: 10px;
+
+        &:focus {
+            border: solid 1px $alert;
+        }
+    }
+
+    &__button {
+        margin-top: 40px;
+    }
+
+}
