@@ -4,15 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная страница</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
-
   <body>
     <header class="header">
       <div class="container header__container">
         <a href="index.html" class="header__logo" tabindex="-1">
-          <img src="img/logo_black.svg" alt="Logo" />
+          <img class="img-light-theme" src="img/logo_black.svg" alt="Logo" />
+          <img class="img-dark-theme" src="img/logo_white.svg" alt="Logo" />
         </a>
         <div class="header__menu">
           <nav class="header__nav">
@@ -31,13 +30,37 @@
               </li>
             </ul>
           </nav>
+          <div class="header__theme">
+            <div class="header__theme-icon">
+              <img
+                src="img/icon/palette.svg"
+                alt="light"
+                class="header__theme-img img-light-theme"
+              />
+              <img
+                src="img/icon/palette-dark.svg"
+                alt="dark"
+                class="header__theme-img img-dark-theme"
+              />
+            </div>
+            <select class="header__theme-select" id="theme">
+              <option value="auto">Авто</option>
+              <option value="light">Светлая</option>
+              <option value="dark">Темная</option>
+            </select>
+          </div>
           <a class="button button--transparent header__button" tabindex="5"
             >Личный кабинет</a
           >
           <div class="header__menu-toggle">
             <img
-              class="header__menu-icon"
-              src="./img/icon/menu-toggle.svg"
+              class="header__menu-icon img-light-theme"
+              src="img/icon/menu-toggle.svg"
+              alt="menu toggle"
+            />
+            <img
+              class="header__menu-icon img-dark-theme"
+              src="img/icon/menu-toggle-dark.svg"
               alt="menu toggle"
             />
           </div>
@@ -60,15 +83,20 @@
             </nav>
             <div class="header__mobile-bottom">
               <a
-                href=""
+                href="Личный кабинет"
                 class="button button--transparent header__mobile-button"
                 >Личный кабинет</a
               >
             </div>
             <div class="header__close-button">
               <img
-                class="header__close-icon"
-                src="img/icon/close.svg"
+                class="header__close-icon img-light-theme"
+                src="./img/icon/close.svg"
+                alt="close"
+              />
+              <img
+                class="header__close-icon img-dark-theme"
+                src="./img/icon/close-dark.svg"
                 alt="close"
               />
             </div>
@@ -106,9 +134,8 @@
                   class="facts__card-img"
                 />
               </div>
-              <div class="facts__card-title">Время</div>
-              <span class="facts__card-line"></span>
-              <div class="facts__card-text">На рынке с 2010 года</div>
+              <h3 class="facts__card-title">Время</h3>
+              <p class="facts__card-text">На рынке с 2010 года</p>
             </div>
             <div class="facts__card">
               <div class="facts__card-logo">
@@ -118,11 +145,10 @@
                   class="facts__card-img"
                 />
               </div>
-              <div class="facts__card-title">Количество</div>
-              <span class="facts__card-line"></span>
-              <div class="facts__card-text">
+              <h3 class="facts__card-title">Количество</h3>
+              <p class="facts__card-text">
                 База насчитывает около 2000 разных курсов
-              </div>
+              </p>
             </div>
             <div class="facts__card">
               <div class="facts__card-logo">
@@ -132,11 +158,10 @@
                   class="facts__card-img"
                 />
               </div>
-              <div class="facts__card-title">Митапы</div>
-              <span class="facts__card-line"></span>
-              <div class="facts__card-text">
+              <h3 class="facts__card-title">Митапы</h3>
+              <p class="facts__card-text">
                 Ежегодные митапы, встречи и конференции
-              </div>
+              </p>
             </div>
             <div class="facts__card">
               <div class="facts__card-logo">
@@ -146,10 +171,10 @@
                   class="facts__card-img"
                 />
               </div>
-              <div class="facts__card-title">Студенты</div>
-              <div class="facts__card-text">
+              <h3 class="facts__card-title">Студенты</h3>
+              <p class="facts__card-text">
                 6000+ студентов, которые получили дополнительный навык
-              </div>
+              </p>
             </div>
           </div>
           <div class="facts__bottom">
@@ -174,17 +199,34 @@
           <img
             src="img/sm1-cloud.svg"
             alt=""
-            class="facts__cloud facts__cloud-lt wow animate__animated animate__fadeIn"
+            class="img-light-theme facts__cloud facts__cloud-lt wow animate__animated animate__fadeIn"
           />
           <img
             src="img/big2-cloud.svg"
             alt=""
-            class="facts__cloud facts__cloud-lb wow animate__animated animate__fadeIn"
+            class="img-light-theme facts__cloud facts__cloud-lb wow animate__animated animate__fadeIn"
           />
           <img
             src="img/big1-cloud.svg"
             alt=""
-            class="facts__cloud facts__cloud-rt wow animate__animated animate__fadeIn"
+            class="img-light-theme facts__cloud facts__cloud-rt wow animate__animated animate__fadeIn"
+          />
+
+          <!-- Dark theme clouds -->
+          <img
+            src="img/sm1-cloud-dark.svg"
+            alt=""
+            class="img-dark-theme facts__cloud facts__cloud-lt wow animate__animated animate__fadeIn"
+          />
+          <img
+            src="img/big2-cloud-dark.svg"
+            alt=""
+            class="img-dark-theme facts__cloud facts__cloud-lb wow animate__animated animate__fadeIn"
+          />
+          <img
+            src="img/big1-cloud-dark.svg"
+            alt=""
+            class="img-dark-theme facts__cloud facts__cloud-rt wow animate__animated animate__fadeIn"
           />
         </div>
       </section>
@@ -245,7 +287,7 @@
                   <div class="review__card-pic">
                     <img
                       src="img/review/person_1.png"
-                      alt=""
+                      alt="Foto"
                       class="review__card-img"
                     />
                   </div>
@@ -261,7 +303,7 @@
                   <div class="review__card-pic">
                     <img
                       src="img/review/person_1.png"
-                      alt=""
+                      alt="Foto"
                       class="review__card-img"
                     />
                   </div>
@@ -277,7 +319,7 @@
                   <div class="review__card-pic">
                     <img
                       src="img/review/person_1.png"
-                      alt=""
+                      alt="Foto"
                       class="review__card-img"
                     />
                   </div>
@@ -293,7 +335,7 @@
                   <div class="review__card-pic">
                     <img
                       src="img/review/person_1.png"
-                      alt=""
+                      alt="Foto"
                       class="review__card-img"
                     />
                   </div>
@@ -309,7 +351,7 @@
                   <div class="review__card-pic">
                     <img
                       src="img/review/person_1.png"
-                      alt=""
+                      alt="Foto"
                       class="review__card-img"
                     />
                   </div>
@@ -325,7 +367,7 @@
                   <div class="review__card-pic">
                     <img
                       src="img/review/person_1.png"
-                      alt=""
+                      alt="Foto"
                       class="review__card-img"
                     />
                   </div>
@@ -445,9 +487,11 @@
 
       <!-- ? Form -->
       <section class="form">
-        <div class="container form__container animate__animated animate__fadeInUp">
-            <span class="form__subtitle">Остались вопросы?</span>
-            <h2 class="form__title">Свяжитесь с нами</h2>
+        <div
+          class="container form__container animate__animated animate__fadeInUp"
+        >
+          <span class="form__subtitle">Остались вопросы?</span>
+          <h2 class="form__title">Свяжитесь с нами</h2>
           <form action="#" class="form__wrap">
             <input
               type="text"
@@ -498,8 +542,9 @@
     </main>
     <footer class="footer">
       <div class="container footer__container">
-        <a href="" class="footer__logo" tabindex="-1">
-          <img src="img/logo_black.svg" alt="Logo" />
+        <a href="index.html" class="footer__logo" tabindex="-1">
+          <img class="img-light-theme" src="img/logo_black.svg" alt="Logo" />
+          <img class="img-dark-theme" src="img/logo_white.svg" alt="Logo" />
         </a>
         <div class="footer__menu">
           <nav class="footer__nav">
@@ -536,6 +581,7 @@
     ></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="js/wow.min.js"></script>
-    <script src="js/main-page.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

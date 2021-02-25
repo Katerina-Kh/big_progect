@@ -1,210 +1,346 @@
-@@include("blocks/_header.html",
-{ "title": "Панель пользователя", 
-"desc": "Панель пользователя"
-})
-@@include("blocks/_mobile-menu.html")
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Панель пользователя</title>
+    <meta name="description" content="Панель пользователя" />
+    <link rel="stylesheet" href="css/bundle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<div class="wrapper">
-  @@include("blocks/_menu.html")
+  <body>
+    <div class="wrapper">
+      <nav class="menu">
+        <div class="menu__wrapper">
+          <div class="menu__top">
+            <a class="menu__logo" href="index.html">
+              <img class="menu__img" src="img/logo.svg" alt="F" />
+            </a>
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#"
+                  ><img class="menu__icon" src="img/icon/home.svg" alt="Home"
+                /></a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#"
+                  ><img
+                    class="menu__icon"
+                    src="img/icon/lessons.svg"
+                    alt="Lessons"
+                /></a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#"
+                  ><img
+                    class="menu__icon"
+                    src="img/icon/account.svg"
+                    alt="Account"
+                /></a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#"
+                  ><img
+                    class="menu__icon"
+                    src="img/icon/message.svg"
+                    alt="Message"
+                /></a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#"
+                  ><img
+                    class="menu__icon"
+                    src="img/icon/settings.svg"
+                    alt="Settings"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu__bottom">
+            <a class="menu__link" href="#"
+              ><img class="menu__icon" src="img/icon/exit.svg" alt="Exit"
+            /></a>
+          </div>
+        </div>
+      </nav>
 
-  <div class="user__container">
+      <div class="mobile-menu__wrapper">
+        <div class="mobile-menu__top">
+          <a class="menu__logo" href="index.html">
+            <img class="menu__img" src="img/logo.svg" alt="F" />
+          </a>
+          <img class="menu__close" src="img/close.svg" alt="close" />
+        </div>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#"
+              ><img class="menu__icon" src="img/icon/home.svg" alt="Home" />
+              <span class="menu__desc">Главная</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#"
+              ><img
+                class="menu__icon"
+                src="img/icon/lessons.svg"
+                alt="Lessons"
+              />
+              <span class="menu__desc">Курсы</span></a
+            >
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#"
+              ><img
+                class="menu__icon"
+                src="img/icon/account.svg"
+                alt="Account"
+              />
+              <span class="menu__desc">Аккаунт</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#"
+              ><img
+                class="menu__icon"
+                src="img/icon/message.svg"
+                alt="Message"
+              />
+              <span class="menu__desc">Оповещения</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#"
+              ><img
+                class="menu__icon"
+                src="img/icon/settings.svg"
+                alt="Settings"
+              />
+              <span class="menu__desc">Настройки</span>
+            </a>
+          </li>
+        </ul>
 
-    <div class="info__top">
-      <div class="mobile-menu">
-        <img class="mobile-menu__img" src="img/menu.svg" alt="Menu">
+        <div class="menu__bottom">
+          <a class="menu__link" href="#">
+            <img class="menu__icon" src="img/icon/exit.svg" alt="Exit" />
+            <span class="menu__desc">Выйти</span>
+          </a>
+        </div>
       </div>
-      <div class="info__top-left">
-        <img class="info__search" src="img/search.svg" alt="search" />
-        <input class="info__input" type="text" placeholder="Введи название курса" />
-      </div>
 
-      <div class="info__top-right">
-        <img class="info__user-foto" src="img/user-foto.jpg" alt="Foto" />
+      <div class="user__container">
+        <div class="info__top">
+          <div class="mobile-menu">
+            <img class="mobile-menu__img" src="img/menu.svg" alt="Menu" />
+          </div>
+          <div class="info__top-left">
+            <img class="info__search" src="img/search.svg" alt="search" />
+            <input
+              class="info__input"
+              type="text"
+              placeholder="Введи название курса"
+            />
+          </div>
 
-        <div class="info__sub-menu">
-          <img class="sub-menu__arrow" src="img/arrow.svg" alt="Select" />
-          <ul class="sub-menu__list">
-            <li class="sub-menu__item">
-              <a href="#" class="sub-menu__link">Профиль</a>
-            </li>
-            <li class="sub-menu__item">
-              <a href="#" class="sub-menu__link">Настройки</a>
-            </li>
-            <li class="sub-menu__item">
-              <a href="#" class="sub-menu__link">Выйти</a>
-            </li>
-          </ul>
+          <div class="info__top-right">
+            <img class="info__user-foto" src="img/user-foto.jpg" alt="Foto" />
+
+            <div class="info__sub-menu">
+              <img class="sub-menu__arrow" src="img/arrow.svg" alt="Select" />
+              <ul class="sub-menu__list">
+                <li class="sub-menu__item">
+                  <a href="#" class="sub-menu__link">Профиль</a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#" class="sub-menu__link">Настройки</a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#" class="sub-menu__link">Выйти</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
+        <div class="user__hello">
+          <div class="user__hello-text">
+            <h1 class="user__hello-title">Привет, username!</h1>
+            <p class="user__hello-desc">Рад, что ты снова зашел</p>
+          </div>
+          <img class="user__hello-img" src="img/user-img.png" alt="User" />
+        </div>
+
+        <div class="info__amount-course">
+          <div class="info__amount-wrap">
+            <div class="amount__number">11</div>
+            <p class="amount__desc">Завершено курсов</p>
+          </div>
+          <div class="info__amount-wrap">
+            <div class="amount__number">4</div>
+            <p class="amount__desc">Активных курсов</p>
+          </div>
+        </div>
+
+        <div class="user__courses">
+          <div class="courses__wrap-left">
+            <div class="courses__img-wrap">
+              <img class="courses__img" src="img/Spanish.svg" alt="Figma" />
+            </div>
+            <div class="courses__desc">
+              <h3 class="courses-neme courses-neme--user">Испанский язык</h3>
+              <p class="courses-author">Автор: Alejandro Velazquez</p>
+            </div>
+          </div>
+          <div class="courses__wrap-right">
+            <div class="courses__progress">
+              <img class="progress-img" src="img/progress.svg" alt="" />
+            </div>
+            <button class="button button--accent">Продолжить</button>
+          </div>
+        </div>
+
+        <div class="info__statistics">
+          <h2 class="info-title">Ваша статистика</h2>
+          <h3 class="info-desc">Ваша статистка за неделю</h3>
+          <img class="info__statistics-chart" src="img/chart.svg" alt="chart" />
+        </div>
+
+        <div class="info__more-course">
+          <div class="info__more-left">
+            <h2 class="info-title">Еще больше курсов</h2>
+            <p class="info-desc">
+              Открой доступ ко всей базе курсов за $ 9,99 / месяц
+            </p>
+            <button class="info__more-button button button--accent">
+              Подписка
+            </button>
+          </div>
+          <img class="info__more-img" src="img/more-course.svg" alt="" />
+        </div>
+
+        <div class="courses">
+          <h2 class="courses__title">Курсы</h2>
+          <div class="filter-button" id="myBtnContainer">
+            <button
+              class="btn btn-filter btn-filter--active"
+              onclick="filterSelection('all')"
+            >
+              Все курсы
+            </button>
+            <button class="btn btn-filter" onclick="filterSelection('popular')">
+              Новые
+            </button>
+            <button class="btn btn-filter" onclick="filterSelection('new')">
+              Самые популярные
+            </button>
+          </div>
+
+          <div class="courses__wrapper popular">
+            <div class="courses__img-wrap">
+              <img class="courses__img" src="img/icon/figma.svg" alt="Figma" />
+            </div>
+            <div class="courses__desc">
+              <h3 class="courses-neme">Figma с нуля</h3>
+              <p class="courses-author">Автор: Christopher Morgan</p>
+            </div>
+            <div class="courses__time">
+              <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
+              <p class="courses-text">6ч 30мин</p>
+            </div>
+            <div class="courses__rating">
+              <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
+              <p class="courses-text">4,9</p>
+            </div>
+            <a href="#" class="button button--transparent"> О курсе</a>
+          </div>
+          <div class="courses__wrapper">
+            <div class="courses__img-wrap">
+              <img class="courses__img" src="img/icon/foto.svg" alt="Photo" />
+            </div>
+            <div class="courses__desc">
+              <h3 class="courses-neme">Основы фотографии</h3>
+              <p class="courses-author">Автор: Gordon Norman</p>
+            </div>
+            <div class="courses__time">
+              <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
+              <p class="courses-text">3ч 15мин</p>
+            </div>
+            <div class="courses__rating">
+              <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
+              <p class="courses-text">4,7</p>
+            </div>
+
+            <a href="#" class="button button--transparent"> О курсе</a>
+          </div>
+          <div class="courses__wrapper new">
+            <div class="courses__img-wrap">
+              <img
+                class="courses__img"
+                src="img/icon/insta.svg"
+                alt="Instagram"
+              />
+            </div>
+            <div class="courses__desc">
+              <h3 class="courses-neme">Мастер Instagram</h3>
+              <p class="courses-author">by Sophie Gill</p>
+            </div>
+            <div class="courses__time">
+              <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
+              <p class="courses-text">7ч 40мин</p>
+            </div>
+            <div class="courses__rating">
+              <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
+              <p class="courses-text">4,6</p>
+            </div>
+
+            <a href="about.html" class="button button--transparent"> О курсе</a>
+          </div>
+          <div class="courses__wrapper popular">
+            <div class="courses__img-wrap">
+              <img
+                class="courses__img"
+                src="img/icon/pancil.svg"
+                alt="Design"
+              />
+            </div>
+            <div class="courses__desc">
+              <h3 class="courses-neme">Курсы рисования</h3>
+              <p class="courses-author">by Jean Tate</p>
+            </div>
+            <div class="courses__time">
+              <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
+              <p class="courses-text">11ч 30мин</p>
+            </div>
+            <div class="courses__rating">
+              <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
+              <p class="courses-text">4,8</p>
+            </div>
+
+            <a href="#" class="button button--transparent"> О курсе</a>
+          </div>
+          <div class="courses__wrapper">
+            <div class="courses__img-wrap">
+              <img class="courses__img" src="img/icon/ps.svg" alt="Photoshop" />
+            </div>
+            <div class="courses__desc">
+              <h3 class="courses-neme">Основы Photoshop</h3>
+              <p class="courses-author">by David Green</p>
+            </div>
+            <div class="courses__time">
+              <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
+              <p class="courses-text">5ч 35мин</p>
+            </div>
+            <div class="courses__rating">
+              <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
+              <p class="courses-text">4,7</p>
+            </div>
+            <a href="#" class="button button--transparent"> О курсе</a>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="user__hello">
-      <div class="user__hello-text">
-        <h1 class="user__hello-title">Привет, username!</h1>
-        <p class="user__hello-desc">Рад, что ты снова зашел</p>
-      </div>
-      <img class="user__hello-img" src="img/user-img.png" alt="User" />
-    </div>
-
-    <div class="info__amount-course">
-      <div class="info__amount-wrap">
-        <div class="amount__number">11</div>
-        <p class="amount__desc">Завершено курсов</p>
-      </div>
-      <div class="info__amount-wrap">
-        <div class="amount__number">4</div>
-        <p class="amount__desc">Активных курсов</p>
-      </div>
-    </div>
-
-    <div class="user__courses">
-      <div class="courses__wrap-left">
-        <div class="courses__img-wrap">
-          <img class="courses__img" src="img/Spanish.svg" alt="Figma" />
-        </div>
-        <div class="courses__desc">
-          <h3 class="courses-neme courses-neme--user">Испанский язык</h3>
-          <p class="courses-author">Автор: Alejandro Velazquez</p>
-        </div>
-      </div>
-      <div class="courses__wrap-right">
-        <div class="courses__progress">
-          <img class="progress-img" src="img/progress.svg" alt="" />
-        </div>
-        <button class="button button--accent">Продолжить</button>
-      </div>
-    </div>
-
-    <div class="info__statistics">
-      <h2 class="info-title">Ваша статистика</h2>
-      <h3 class="info-desc">Ваша статистка за неделю</h3>
-      <img class="info__statistics-chart" src="img/chart.svg" alt="chart" />
-    </div>
-
-    <div class="info__more-course">
-      <div class="info__more-left">
-        <h2 class="info-title">Еще больше курсов</h2>
-        <p class="info-desc">
-          Открой доступ ко всей базе курсов за $ 9,99 / месяц
-        </p>
-        <button class="info__more-button button button--accent">
-          Подписка
-        </button>
-      </div>
-      <img class="info__more-img" src="img/more-course.svg" alt="" />
-    </div>
-
-    <div class="courses">
-      <h2 class="courses__title">Курсы</h2>
-      <div class="filter-button" id="myBtnContainer">
-        <button class="btn btn-filter btn-filter--active" onclick="filterSelection('all')">
-          Все курсы
-        </button>
-        <button class="btn btn-filter" onclick="filterSelection('popular')">
-          Новые
-        </button>
-        <button class="btn btn-filter" onclick="filterSelection('new')">
-          Самые популярные
-        </button>
-      </div>
-
-      <div class="courses__wrapper popular">
-        <div class="courses__img-wrap">
-          <img class="courses__img" src="img/icon/figma.svg" alt="Figma" />
-        </div>
-        <div class="courses__desc">
-          <h3 class="courses-neme">Figma с нуля</h3>
-          <p class="courses-author">Автор: Christopher Morgan</p>
-        </div>
-        <div class="courses__time">
-          <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
-          <p class="courses-text">6ч 30мин</p>
-        </div>
-        <div class="courses__rating">
-          <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
-          <p class="courses-text">4,9</p>
-        </div>
-        <a href="#" class="button button--transparent">  О курсе</a>
-      </div>
-      <div class="courses__wrapper">
-        <div class="courses__img-wrap">
-          <img class="courses__img" src="img/icon/foto.svg" alt="Photo" />
-        </div>
-        <div class="courses__desc">
-          <h3 class="courses-neme">Основы фотографии</h3>
-          <p class="courses-author">Автор: Gordon Norman</p>
-        </div>
-        <div class="courses__time">
-          <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
-          <p class="courses-text">3ч 15мин</p>
-        </div>
-        <div class="courses__rating">
-          <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
-          <p class="courses-text">4,7</p>
-        </div>
-
-        <a href="#" class="button button--transparent">  О курсе</a>
-      </div>
-      <div class="courses__wrapper new">
-        <div class="courses__img-wrap">
-          <img class="courses__img" src="img/icon/insta.svg" alt="Instagram" />
-        </div>
-        <div class="courses__desc">
-          <h3 class="courses-neme">Мастер Instagram</h3>
-          <p class="courses-author">by Sophie Gill</p>
-        </div>
-        <div class="courses__time">
-          <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
-          <p class="courses-text">7ч 40мин</p>
-        </div>
-        <div class="courses__rating">
-          <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
-          <p class="courses-text">4,6</p>
-        </div>
-
-        <a href="about.html" class="button button--transparent">  О курсе</a>
-      </div>
-      <div class="courses__wrapper popular">
-        <div class="courses__img-wrap">
-          <img class="courses__img" src="img/icon/pancil.svg" alt="Design" />
-        </div>
-        <div class="courses__desc">
-          <h3 class="courses-neme">Курсы рисования</h3>
-          <p class="courses-author">by Jean Tate</p>
-        </div>
-        <div class="courses__time">
-          <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
-          <p class="courses-text">11ч 30мин</p>
-        </div>
-        <div class="courses__rating">
-          <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
-          <p class="courses-text">4,8</p>
-        </div>
-
-        <a href="#" class="button button--transparent">  О курсе</a>
-      </div>
-      <div class="courses__wrapper">
-        <div class="courses__img-wrap">
-          <img class="courses__img" src="img/icon/ps.svg" alt="Photoshop" />
-        </div>
-        <div class="courses__desc">
-          <h3 class="courses-neme">Основы Photoshop</h3>
-          <p class="courses-author">by David Green</p>
-        </div>
-        <div class="courses__time">
-          <img class="courses-icon" src="img/icon/timer.svg" alt="Timer" />
-          <p class="courses-text">5ч 35мин</p>
-        </div>
-        <div class="courses__rating">
-          <img class="courses-icon" src="img/icon/fire.svg" alt="Rating" />
-          <p class="courses-text">4,7</p>
-        </div>
-        <a href="#" class="button button--transparent">  О курсе</a>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-@@include("blocks/_footer.html")
+    <script src="js/common.js"></script>
+  </body>
+</html>

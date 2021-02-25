@@ -1,9 +1,104 @@
-@@include("blocks/_header.html", { "title": "Панель администратора", "desc":
-"Панель администратора" })
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Панель администратора</title>
+    <meta name="description" content="Панель администратора">
+    <link rel="stylesheet" href="css/bundle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
+  <body>
 <div class="wrapper">
-  @@include("blocks/_menu.html") 
-  @@include("blocks/_mobile-menu.html")
+  <nav class="menu">
+    <div class="menu__wrapper">
+      <div class="menu__top">
+        <a class="menu__logo" href="index.html">
+          <img class="menu__img" src="img/logo.svg" alt="F" />
+        </a>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#"
+              ><img class="menu__icon" src="img/icon/home.svg" alt="Home"
+            /></a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#"
+              ><img class="menu__icon" src="img/icon/lessons.svg" alt="Lessons"
+            /></a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#"
+              ><img class="menu__icon" src="img/icon/account.svg" alt="Account"
+            /></a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#"
+              ><img class="menu__icon" src="img/icon/message.svg" alt="Message"
+            /></a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#"
+              ><img class="menu__icon" src="img/icon/settings.svg" alt="Settings"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="menu__bottom">
+        <a class="menu__link" href="#"
+          ><img class="menu__icon" src="img/icon/exit.svg" alt="Exit"
+        /></a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu__wrapper">
+    <div class="mobile-menu__top">
+      <a class="menu__logo" href="index.html">
+        <img class="menu__img" src="img/logo.svg" alt="F" />
+      </a>
+      <img class="menu__close" src="img/close.svg" alt="close" >
+    </div>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="#"
+            ><img class="menu__icon" src="img/icon/home.svg" alt="Home" />
+            <span class="menu__desc">Главная</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#"
+            ><img class="menu__icon" src="img/icon/lessons.svg" alt="Lessons"/>
+            <span class="menu__desc">Курсы</span></a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#"
+            ><img class="menu__icon" src="img/icon/account.svg" alt="Account"/>
+            <span class="menu__desc">Аккаунт</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#"
+            ><img class="menu__icon" src="img/icon/message.svg" alt="Message"/>
+            <span class="menu__desc">Оповещения</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#"
+            ><img class="menu__icon" src="img/icon/settings.svg" alt="Settings"/>
+            <span class="menu__desc">Настройки</span>
+          </a>
+        </li>
+      </ul>
+
+    <div class="menu__bottom">
+      <a class="menu__link" href="#">
+        <img class="menu__icon" src="img/icon/exit.svg" alt="Exit"/>
+        <span class="menu__desc">Выйти</span>
+      </a>
+    </div>
+  </div>
   <div class="mobile-menu">
     <img class="mobile-menu__img" src="img/menu.svg" alt="Menu" />
   </div>
@@ -142,4 +237,6 @@
   </div>
 </div>
 
-@@include("blocks/_footer.html")
+<script src="js/common.js"></script>
+</body>
+</html>

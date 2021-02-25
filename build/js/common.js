@@ -1,34 +1,31 @@
-document.addEventListener("DOMContentLoaded", function () {
 
-  // ! Мобильное меню
-  const BtnMobile = document.querySelector(".mobile-menu");
-  const CloseMobile = document.querySelector(".menu__close");
-  const MenuWrapper = document.querySelector(".mobile-menu__wrapper");
+// ! Мобильное меню
+const BtnMobile = document.querySelector(".mobile-menu");
+const CloseMobile = document.querySelector(".menu__close");
+const MenuWrapper = document.querySelector(".mobile-menu__wrapper");
 
-  const OpenMenu = function () {
-    MenuWrapper.classList.add("mobile-menu__wrapper--active")
-  }
-  const CloseMenu = function () {
-    MenuWrapper.classList.remove("mobile-menu__wrapper--active")
-  }
+const OpenMenu = function () {
+  MenuWrapper.classList.add("mobile-menu__wrapper--active");
+};
+const CloseMenu = function () {
+  MenuWrapper.classList.remove("mobile-menu__wrapper--active");
+};
 
-  BtnMobile.addEventListener("click", OpenMenu)
-  CloseMobile.addEventListener("click", CloseMenu)
+BtnMobile.addEventListener("click", OpenMenu);
+CloseMobile.addEventListener("click", CloseMenu);
 
+// ! Список
+const arrow = document.querySelector(".sub-menu__arrow");
+const SubMenu = document.querySelector(".sub-menu__list");
 
-  // ! Список
-  const arrow = document.querySelector(".sub-menu__arrow");
-  const SubMenu = document.querySelector(".sub-menu__list");
+const OpenSabMenu = function () {
+  SubMenu.classList.toggle("sub-menu--active");
+};
+arrow.addEventListener("click", OpenSabMenu);
 
-  const OpenSabMenu = function () {
-    SubMenu.classList.toggle("sub-menu--active");
-  }
-  arrow.addEventListener("click", OpenSabMenu)
-
-})
 // ! Сортировка
 
-filterSelection("all")
+filterSelection("all");
 
 function filterSelection(c) {
   var x, i;

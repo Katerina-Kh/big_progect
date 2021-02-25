@@ -16,7 +16,7 @@
 
 
   &:focus {
-    background-color:  $alert;
+    background-color: lighten($color: $alert, $amount: 70%);
   }
 
   &--transparent {

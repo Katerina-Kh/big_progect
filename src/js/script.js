@@ -36,17 +36,28 @@ $(document).ready(function(){
     
     });
 
+    let menu = $(".header__mobile-menu");
+
     //Вызов мобильного меню
     $(".header__menu-toggle").on("click", function(){
-        $(".header__mobile-menu").addClass("header__mobile-menu-active");
+      menu.addClass("header__mobile-menu-active");
+        $("body").css("overflow-y", "hidden");
     });
 
 
     //Скрытие мобильного меню
     $(".header__close-button").on("click", function(){
-        $(".header__mobile-menu").removeClass("header__mobile-menu-active");
+        menu.removeClass("header__mobile-menu-active");
+        $("body").css("overflow-y", "auto");
     });
 
 
+    //Закрытие меню при нажатии на пустое пространство
+    $(document).mouseup(function (e){ 
+      if (!menu.is(e.target) && menu.has(e.target).length === 0) { 
+            menu.removeClass("header__mobile-menu-active"); 
+            $("body").css("overflow-y", "auto");
+      }
+    });
 
   });
